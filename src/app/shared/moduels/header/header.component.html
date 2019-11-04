@@ -1,0 +1,56 @@
+<div *ngIf="!loginHeaderType && templateName === 'UserHome'; then UserHome"></div>
+<div *ngIf="!loginHeaderType && templateName === 'NewBusiness'; then NewBusiness"></div>
+
+<ng-template #UserHome>
+  <nav class="navbar navbar-expand-md py-0  navbar-light fixed-top" style="background-color: #005f81!important;">
+    <a class="navbar-brand">Policy Booking System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav navbar-right mr-auto">
+        <li class="nav-item">
+          <!-- <a class="nav-link" routerLink="/new-business" style="color: white;" i18n="@@header_new_bus">New Business</a> -->
+          <a class="nav-link" routerLink="/sci-new-buss" style="color: white;" i18n="@@header_new_bus">New Business</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/new-business" style="color: white;" i18n="@@header_renewal">Renewals</a>
+        </li>        
+      </ul>
+      <form class="navbar-form navbar-right" role="search" style="padding-top: 0.7em;">
+        <li class="dropdown">
+          <a  class="nav-link dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;color: white;"><fa name="user"></fa> {{loggedinUserName}}</a>
+          <ul id="login-dp" class="dropdown-menu" style="cursor: pointer;">
+            <li class="nav-item"><a class="nav-link" href="#" (click)="logoutUser()"><span i18n="@@header_logout">Logout </span><fa name="sign-out"></fa></a></li>            
+           </ul>         
+        </li>
+      </form>
+    </div>
+  </nav>
+</ng-template>
+
+<ng-template #NewBusiness>
+  <nav class="navbar navbar-expand-md py-0  navbar-light fixed-top" style="background-color: #005f81;">
+    <a class="navbar-brand" href="#">Policy Booking System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav navbar-right mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/worklist" style="color: white;" i18n="@@header_return_to_worklist">Return to Worklist</a>
+        </li>                
+      </ul>
+      <form class="navbar-form navbar-right" role="search" style="padding-top: 0.7em;">
+        <li class="dropdown">
+            <a  class="nav-link dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;color: white;"><fa name="user"></fa> {{loggedinUserName}}</a>
+          <ul id="login-dp" class="dropdown-menu" style="cursor: pointer;">
+              <li class="nav-item"><a class="nav-link" href="#" (click)="logoutUser()"><span i18n="@@header_logout">Logout </span><fa name="sign-out"></fa></a></li>            
+           </ul>         
+        </li>
+      </form>
+    </div>
+  </nav>
+</ng-template>

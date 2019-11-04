@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="ng2.template" source-language="en">
+    <body>
+      <trans-unit datatype="html" id="loginscreen_f_header">
+        <source>Sign In</source><target>Sign In</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/moduels/login/login.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="lognscreen_f_user_name">
+        <source>Login name</source><target>Login name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/moduels/login/login.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="loginscreen_f_v_user_name">
+        <source>Login Name is required</source><target>Login Name is required</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/moduels/login/login.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="lognscreen_f_password">
+        <source>Password</source><target>Password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/moduels/login/login.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="loginscreen_f_v_password">
+        <source>Password is required</source><target>Password is required</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/moduels/login/login.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="loginscreen_f_rem_me">
+        <source>Remember Me</source><target>Remember Me</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/moduels/login/login.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="loginscreen_f_login_btn">
+        <source>Login</source><target>Login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/moduels/login/login.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="header_new_bus">
+        <source>New Business</source><target>New Business</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/moduels/header/header.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="header_renewal">
+        <source>Renewals</source><target>Renewals</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/moduels/header/header.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="header_logout">
+        <source>Logout </source><target>Logout </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/moduels/header/header.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/moduels/header/header.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="header_return_to_worklist">
+        <source>Return to Worklist</source><target>Return to Worklist</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/moduels/header/header.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

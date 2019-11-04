@@ -1,0 +1,18 @@
+.nav-item{
+    padding:2px;
+    margin-left: 7px;
+}
+.navbar-nav {
+    align-items: flex-end;
+}
+li {
+    list-style-type: none;
+}
+.panel-default > .panel-heading {
+    padding: 0;
+    border-radius: 0;
+    color: #212121;
+    background-color: #FAFAFA;
+    border-color: #EEEEEE;
+}
+.label,.glyphicon { margin-right:5px; }

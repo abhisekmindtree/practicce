@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/starr-ml-policy-booking-app",
+            "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,9 +28,18 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/scss/font-awesome.scss",
+              "node_modules/ag-grid-community/dist/styles/ag-theme-blue.css",
+              "node_modules/ag-grid-community/dist/styles/ag-theme-bootstrap.css",
+              "node_modules/ag-grid-community/dist/styles/ag-grid.css",               
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -61,6 +70,52 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "production-zh-Hans": {
+              "optimization": true,
+              "outputHashing": "all",
+              "outputPath": "dist/browser/zh-Hans/",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "baseHref": "/zh-Hans/",
+              "i18nFile": "src/messages/messages.zh-Hans.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "zh-Hans",
+              "i18nMissingTranslation": "error"
+            },
+            "production-en": {
+              "optimization": true,
+              "outputHashing": "all",
+              "outputPath": "dist/browser/en/",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "baseHref": "/en/",
+              "i18nFile": "src/messages/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -72,6 +127,12 @@
           "configurations": {
             "production": {
               "browserTarget": "starr-ml-policy-booking-app:build:production"
+            },
+            "en": {
+              "browserTarget": "policy-booking-app:build:production-en"
+            },
+            "zh-Hans": {
+              "browserTarget": "policy-booking-app:build:production-zh-Hans"
             }
           }
         },
@@ -120,6 +181,29 @@
           "configurations": {
             "production": {
               "devServerTarget": "starr-ml-policy-booking-app:serve:production"
+            }
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": {
+                "scripts": false,
+                "styles": true
+              }
             }
           }
         }

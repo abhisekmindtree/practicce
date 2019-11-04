@@ -1,0 +1,49 @@
+<app-header></app-header>
+<app-header></app-header>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="margin-top: 3rem">
+
+    <div class="panel panel-default show">
+        <div class="panel-heading" style="background-color: #e3f2fd;" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true"
+                    aria-controls="collapse1">
+                    Worklist Search Criteria
+                    <i class="glyphicon glyphicon-arrow-down" style="float: right;"></i>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in show">
+            <div class="panel-body">
+                <div class="card-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <input type="text" name="policyNumber" pInputText
+                                    [(ngModel)]="model.policyNumber" class="form-control"
+                                    placeholder="Enter Policy Number">
+                            </div>
+                            <div class="col-md-2">
+                                <input type="text" pInputText [(ngModel)]="model.accountName"
+                                    name="accountName" class="form-control" placeholder="Enter Account Name" />
+                            </div>
+                        </div>                        
+                    </form>
+                </div>
+                <div style="text-align: center;">
+                    <button type="button" class="btn btn-primary" (click)="searchWorklist();"
+                        style="width: 10em;">Search</button>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+<ag-grid-angular 
+    class="ag-theme-blue worklist-data-list-style" style="font-size: 12px;width: 100%" 
+    [rowData]="rowData" 
+    [columnDefs]="columnDefs"
+    pagination="true"
+    paginationPageSize=10
+    autoSizeColumns=true>
+</ag-grid-angular>
+<app-footer></app-footer>
